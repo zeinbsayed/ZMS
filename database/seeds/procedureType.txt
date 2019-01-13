@@ -1,0 +1,2 @@
+ProcedureType::create(['name'=>'Radiology']);
+		ProcedureType::create(['name'=>'Lab']);

@@ -1,0 +1,5 @@
+		Role::create(['name'=>'Admin']);
+		Role::create(['name'=>'Doctor']);
+		Role::create(['name'=>'Nursing']);
+		Role::create(['name'=>'Receiption']);
+		Role::create(['name'=>'SubAdmin']);
