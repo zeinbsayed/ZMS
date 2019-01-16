@@ -3286,8 +3286,8 @@ public function storeVisit(Request $request,$pid,$visit_id)
 	   ->join('roles','roles.id','=','users.role_id')
 	   ->select('patients.new_id as pid','patients.name as pname',
 	   'patients.birthdate as pBD','rooms.name as romname','contracts.name as contname',
-	   'patients.address as paddress','visits.entry_date as v_entrydate','visits.ticket_number as vticket_number')
-	   ->where('visits.entry_date','=',$fromdate)
+	   'patients.address as paddress','visits.exit_date as v_exitdate','visits.ticket_number as vticket_number')
+	   ->where('visits.exit_date','=',$fromdate)
 	   ->where('users.role_id','=',$role_id)
 	   ->get();
 	   return view('private.ondayPatientReport',array('data'=>$data ,'onedayrep_active'=>$onedayrep_active,
