@@ -410,7 +410,7 @@ class VisitController extends Controller
 	{
 		$user=User::find(Auth::id());
 		$role_name=$user->role->name;
-		$medical_visit=Visit::join('medical_unit_visit', 'visits.id', '=', 'medical_unit_visit.visit_id')
+		$medic-al_visit=Visit::join('medical_unit_visit', 'visits.id', '=', 'medical_unit_visit.visit_id')
 				  ->join('medical_units','medical_unit_visit.medical_unit_id','=','medical_units.id')
 				  ->leftJoin('users','users.id','=','medical_unit_visit.reference_doctor_id')
 				  ->where('visits.id','=',$visitid)
