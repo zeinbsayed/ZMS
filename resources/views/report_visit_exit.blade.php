@@ -32,6 +32,9 @@ body{size: 21cm 29.7cm;
 	<tr>
 		<th>العنوان:</th><td>{{$data->patient->address}}</td>
 	</tr>
+	<tr>
+		<th>المهنة:</th><td>{{$data->patient->job}}</td>
+	</tr>
 	@if($role_name=="GeneralRecept")
 	<tr>
 		<th> طبيب الاستقبال :</th><td>{{ isset($data->doctor_name)?$data->doctor_name:''}}</td>
@@ -42,6 +45,9 @@ body{size: 21cm 29.7cm;
 	</tr>
 	<tr>
 		<th> تاريخ الخروج :</th><td>{{$data->exit_date}}</td>
+	</tr>
+	<tr>
+		<th> التشخيص المبدئي :</th><td>{{$data->entry_reason_desc}}</td>
 	</tr>
 	<tr>
 		<th> التشخيص النهائي :</th><td>{{$data->final_diagnosis}}</td>

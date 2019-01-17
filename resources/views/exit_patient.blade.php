@@ -67,8 +67,8 @@
 							</div>
 
 							<div class="form-group">
-							  {!! Form::label('الطبيب',null) !!}
-								{!! Form::text('doctor',$medical_visit['0']->uname,array('disabled','class'=>'form-control','id'=>'doctor')) !!}
+							  {!! Form::label('طبيب الخروج',null,array('style'=>'color:red')) !!}
+								{!! Form::text('doctor',$medical_visit['0']->uname,array('class'=>'form-control','id'=>'doctor','placeholder'=>'طبيب الخروج')) !!}
 							</div>
 							@endif
 							<div class="form-group">
